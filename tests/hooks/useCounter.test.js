@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react';
+import { renderHook, act } from '@testing-library/react';
 import { useCounter } from '../../src/hooks';
 
 describe('Tests in the useCounter hook', () => {
@@ -23,6 +23,47 @@ describe('Tests in the useCounter hook', () => {
 
         expect( counter ).toBe( 100 );
 
+    });
+
+    test('should increment the counter', () => {
+
+        const { result } = renderHook( () => useCounter( 200 ) );
+        const { counter, increment } = result.current;
+
+        act(() => {
+            increment(1);
+            increment(2);
+        });
+
+        expect( result.current.counter ).toBe( 203 );
+
+    });
+
+
+    test('should decrement the counter', () => {
+
+        const { result } = renderHook( () => useCounter( 200 ) );
+        const { counter, decrement } = result.current;
+
+        act(() => {
+            decrement(1);
+            decrement(2);
+        });
+
+        expect( result.current.counter ).toBe( 198 );
+
+    });
+
+    test('should reset the counter', () => {
+
+        const { result } = renderHook( () => useCounter( 200 ) );
+        const { counter, reset } = result.current;
+
+        act(() => {
+            reset();
+        });
+
+        expect( result.current.counter ).toBe( 200 );
 
     });
 

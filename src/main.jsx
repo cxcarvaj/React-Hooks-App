@@ -1,6 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { TodoApp } from './08-useReducer/TodoApp'
+import { BrowserRouter } from 'react-router-dom';
+
+import { MainApp } from './09-useContext/MainApp';
+
+// import { TodoApp } from './08-useReducer/TodoApp'
 
 // import { Parent } from './07-memo-homework/Parent'
 
@@ -44,6 +48,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <MemoHook /> */}
     {/* <CallbackHook /> */}
     {/* <Parent /> */}
-    <TodoApp />
+    {/* <TodoApp /> */}
+    <BrowserRouter>
+      <MainApp />
+    </BrowserRouter>
   </React.StrictMode>,
 )

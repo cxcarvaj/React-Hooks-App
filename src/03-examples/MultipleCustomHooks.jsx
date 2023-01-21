@@ -5,13 +5,10 @@ export const MultipleCustomHooks = () => {
 
     const { counter, increment } = useCounter( 1 ); 
 
-    const { data, isLoading, error } = useFetch(`https://www.breakingbadapi.com/api/quotes/${ counter }`);
+    const { data, isLoading, error } = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes/${ counter }`);
 
     // * This should be change due to the api is not working.
-    const { author, quote } = Boolean(data) && { 
-        author: 'Default Author', quote: 'This is inspiring quote'
-        };
-
+    const { author, quote } = Boolean(data) && data[0];
 
     return(
         <>
@@ -27,7 +24,7 @@ export const MultipleCustomHooks = () => {
                 className="btn btn-primary"
                 disabled={ isLoading }
                 onClick={ () => increment() }
-                >
+            >
                     Next Quote
             </button>
 

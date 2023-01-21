@@ -21,7 +21,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-<!-- ### `yarn test`
+### `yarn test`
 
 To run all the unit tests in this project.
 
@@ -30,6 +30,6 @@ To run all the unit tests in this project.
 
 To run all the unit test and watch files for changes and rerun tests related to changed files. -->
 
-<!-- ## Important Information
+## Important Information
 
-[Installation and configuration of Jest + React Testing Library](https://gist.github.com/cxcarvaj/427aec0c9ed5e8b61657114b595355f0) -->
+[Installation and configuration of Jest + React Testing Library](https://gist.github.com/cxcarvaj/427aec0c9ed5e8b61657114b595355f0)

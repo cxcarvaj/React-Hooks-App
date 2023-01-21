@@ -6,7 +6,7 @@ export const CallbackHook = () => {
     const [ counter, setCounter ] = useState( 10 );
 
     //  * Same as useMemo but to memorize functions
-    const increment = useCallback(( incrementValue ) => {
+    const incrementFather = useCallback(( incrementValue ) => {
         setCounter( (value) => value + incrementValue );
     }, []);
 
@@ -15,7 +15,7 @@ export const CallbackHook = () => {
             <h1>useCallback Hook: { counter }</h1>
             <hr />
 
-            <ShowIncrement increment={ increment }/>
+            <ShowIncrement increment={ incrementFather }/>
 
         </>
     )

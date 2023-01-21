@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 
-export const Quote = ( {author, quote} ) => {
+export const Quote = ({ author, quote }) => {
 
     const paragraphRef = useRef();
 

@@ -1,5 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { TodoItem } from "../../src/08-useReducer/components/TodoItem";
+import { render, screen, fireEvent } from '@testing-library/react';
+import { TodoItem } from "../../src/08-useReducer/components";
 
 
 describe('Tests on the <TodoItem /> component', () => {
